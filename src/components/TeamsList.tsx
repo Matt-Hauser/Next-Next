@@ -13,6 +13,7 @@ import Team from "./Team";
 const teamStyle = {
   display: "flex",
   flexDirection: "row",
+
   justifyContent: "space-around",
 };
 
@@ -31,13 +32,21 @@ function TeamsList({ loading, savedTeams }) {
   }
   if (savedTeams) {
     return (
-      <div style={{ display: "block" }}>
-        {savedTeams.map((team) => (
-          <div style={teamStyle}>
-            <Team key={team.id} team={team} />
-          </div>
-        ))}
-      </div>
+      <>
+        <div style={{ display: "block", marginBottom: "2%" }}>
+          {savedTeams.map((team, i) => (
+            <>
+              <Typography>Team #{i + 1}</Typography>
+              <br />
+              <div style={teamStyle}>
+                <Team key={team.id} team={team} />
+              </div>
+              <br />
+            </>
+          ))}
+          <br />
+        </div>
+      </>
     );
   }
   {

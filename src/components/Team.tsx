@@ -20,7 +20,7 @@ function Team({ team }) {
             }}
             key={i}
           >
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ justifyContent: "center" }}>
               <CardMedia
                 sx={{ objectFit: "contain" }}
                 height={100}
@@ -30,8 +30,24 @@ function Team({ team }) {
             </div>
 
             <CardContent>
-              <Typography>{capitalize(pokemon.name)}</Typography>
-              <Typography>{pokemon.description}</Typography>
+              <Typography>
+                <p>
+                  {capitalize(pokemon.name)} #{pokemon.id}
+                </p>
+                <img
+                  height="30px"
+                  src={`https://raw.githubusercontent.com/msikma/pokesprite/master/misc/type-logos/gen8/${pokemon.types[0].type.name}.png`}
+                />{" "}
+                {pokemon.types.length > 1 ? (
+                  <img
+                    height="30px"
+                    src={`https://raw.githubusercontent.com/msikma/pokesprite/master/misc/type-logos/gen8/${pokemon.types[1].type.name}.png`}
+                  />
+                ) : (
+                  ""
+                )}
+              </Typography>
+              <Typography></Typography>
             </CardContent>
             <CardActions></CardActions>
           </Card>
