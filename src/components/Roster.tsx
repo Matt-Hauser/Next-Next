@@ -51,7 +51,9 @@ function Roster({ pokemonList, loading }) {
           </div>
 
           <CardContent>
-            <Typography>{capitalize(pokemon.name)}</Typography>
+            <Typography>
+              <h4>{capitalize(pokemon.name)}</h4>
+            </Typography>
           </CardContent>
           <CardActions>
             <Button>View Stats</Button>

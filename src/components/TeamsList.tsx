@@ -30,6 +30,22 @@ function TeamsList({ loading, savedTeams }) {
       </>
     );
   }
+  if (savedTeams.length < 1) {
+    return (
+      <div>
+        <h1>No Teams Saved Yet...</h1>
+
+        <img
+          height={250}
+          src="https://media.tenor.com/kjqof9l6gk8AAAAC/pikachu-sad.gif"
+        />
+        <h3 style={{ color: "GrayText" }}>
+          Return to the Pokemon page to add Pokemon
+        </h3>
+        <br />
+      </div>
+    );
+  }
   if (savedTeams) {
     return (
       <>

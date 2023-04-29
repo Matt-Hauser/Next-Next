@@ -29,7 +29,9 @@ function TeamSideBar() {
       </div>
       <div style={{ marginTop: "0%" }}></div>
       <ListItem divider style={{ justifyContent: "center", lineHeight: 3 }}>
-        <Typography fontWeight={"bold"}>Your Team</Typography>
+        <Typography fontWeight={"bold"}>
+          <h3>Your Team</h3>
+        </Typography>
       </ListItem>
 
       {currentTeam && currentTeam.length > 0 ? (
@@ -47,7 +49,9 @@ function TeamSideBar() {
                 lineHeight: 3,
               }}
             >
-              <Typography>{capitalize(pokemon.name)} </Typography>
+              <Typography>
+                <h5>{capitalize(pokemon.name)}</h5>{" "}
+              </Typography>
 
               <img
                 style={{ marginBottom: "15px" }}
@@ -60,7 +64,9 @@ function TeamSideBar() {
         })
       ) : (
         <ListItem style={{ display: "flex", justifyContent: "center" }} divider>
-          <Typography>No Pokemon in Team</Typography>
+          <Typography>
+            <h4 style={{ color: "GrayText" }}>No Pokemon in Team</h4>
+          </Typography>
         </ListItem>
       )}
 

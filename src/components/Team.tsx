@@ -34,6 +34,7 @@ function Team({ team }) {
                 <p>
                   {capitalize(pokemon.name)} #{pokemon.id}
                 </p>
+                <p>Types:</p>
                 <img
                   height="30px"
                   src={`https://raw.githubusercontent.com/msikma/pokesprite/master/misc/type-logos/gen8/${pokemon.types[0].type.name}.png`}
